@@ -1,0 +1,7 @@
+video with number
+1) What is express js
+2) mvc patter
+3) refactor router => router.route('/').get((req, res) => console.log('s')).post(() => console.log('s'))
+4) refactor controllers => JS-doc-syntext, res.download, res-redirect('/login'), router.route('').get(() => {})
+5) middleware => a middleware is a function. middleware function has access to 3 things. (i)req (ii)res (iii)next. Middleware can send response, call the next middleware in the stack & other. 5 types of middleware.
+6) express-rate-limit(third party middleware)
