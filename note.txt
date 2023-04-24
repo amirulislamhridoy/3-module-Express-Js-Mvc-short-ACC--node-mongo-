@@ -6,5 +6,5 @@ video with number
 5) middleware => a middleware is a function. middleware function has access to 3 things. (i)req (ii)res (iii)next. Middleware can send response, call the next middleware in the stack & other. 5 types of middleware.
 6) express-rate-limit(third party middleware)
 7) 
-8) send static files, view-engine, express.static('public')
+8) send static files, view-engine (sadaronoto views file a kaj kore), express.static('public')
 9) errorHandle main error handle system
