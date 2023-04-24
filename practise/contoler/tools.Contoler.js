@@ -11,7 +11,20 @@ module.exports.getSingleTool = (req, res, next) => {
 }
 module.exports.postSingleTool = (req, res, next) =>{
     const data = req.body
-    console.log('body', data)
-    // tools = [...tools, data]
+    tools = [...tools, data]
     res.send(tools)
+}
+module.exports.updateSingleTool = (req, res, next) => {
+    const {id} = req.params
+    const {name} = req.body
+    let newTool = tools.find(t => t._id === +id)
+    newTool.name = name
+    newTool._id = +id
+    tools = [...tools.filter(t => t._id !== Number(id)), newTool]
+    res.send(tools)
+}
+module.exports.deleteSingleTool = (req, res, next) => {
+    const {id} = req.params
+    tools = [...tools.filter(t => t._id !== Number(id))]
+    res.send('delete successfull')
 }
