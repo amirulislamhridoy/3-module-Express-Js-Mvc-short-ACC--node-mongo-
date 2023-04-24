@@ -11,6 +11,7 @@ module.exports.getAllTools = (req, res) => {
   res.send('get all tools')
 }
 module.exports.postTool = (req, res) => {
+  console.log('body', req.body)
   res.send('Added a tool')
 }
 
